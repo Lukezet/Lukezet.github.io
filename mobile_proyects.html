@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MobileWorks</title>
+</head>
+<html>
+<head>
+  <title>Vista de Videos</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html, body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    html {
+    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+}
+    body {
+      background-color: #141414;
+      display: flex;
+      background-image: url('assets/img/nnneonSquare.svg');
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Raleway', sans-serif;
+    }
+.cardOne{animation: slideIn 1s forwards;}
+    @keyframes slideIn {
+      0% {
+    transform: translateX(-100%);
+  }
+    100% {
+    transform: translateX(0);
+      }
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 10px;
+      height: auto;
+      margin: 30px;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    }
+    @media (max-width: 700px) {
+  
+
+  .card {
+      height: auto;
+      text-align: center;
+      margin: 30px 0;
+      grid-template-columns: 1fr;
+      border-radius: 30px;
+    }
+}
+    
+    .video {
+      align-self: center;
+      justify-self: center;
+      height: 50rem;
+      border-radius: 20px;
+      -webkit-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+    }
+    @media (max-width: 700px) {
+  .video {
+      height: 80vh;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      }
+  }
+  .textSection{
+    justify-self: center;
+    width: 35rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0rem;
+  }
+  .Proyect-work{
+    font-size: 4rem;
+    color: aliceblue;
+  }
+  .description {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: aliceblue;
+  }
+  .goGitHubProyect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-weight: bold; 
+    background: #262626;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #29febf;
+    border-radius: 2px;
+    box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+  }
+  .goGitHubProyect:hover{
+    color: #29febf;
+    background:#fff;
+
+}
+  .backbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 4rem;
+    cursor: pointer;
+    font-weight: bold;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #8731e0;
+    border-radius: 2px;
+    box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+  }
+  .backbtn:hover{
+    color: #8731e0;
+    background:#fff;
+
+}
+  .fab.fa-github {
+    font-size: 2.5rem; /* Ajusta el tamaño según tus necesidades */
+  }
+
+  </style>
+</head>
+<body>
+  <div class="card cardOne">
+    <video class="video" src="/assets/videos/MoviesAPP.mp4" controls></video>
+    <section class="textSection">
+      <h1 class="Proyect-work">MoviesAPP</h1>
+      <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+      <a href="https://github.com/Lukezet/MoviesApp" class="goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
+      <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
+    </section>
+  </div>
+  
+  <div class="card">
+    <video class="video" src="/assets/videos/MoviesAPP.mp4" controls></video>
+    <section class="textSection"> 
+      <h1 class="Proyect-work">Invitation Card</h1>
+      <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+      <div class="goGitHubProyect">
+        <a href="https://github.com/Lukezet/MoviesApp" target="_blank">See the Code<i class="fab fa-github"></i></a>
+      </div>
+      <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
+    </section> 
+  </div>
+  
+  <div class="card">
+    <video class="video" src="/assets/videos/MoviesAPP.mp4" controls></video>
+    <section class="textSection"> 
+      <h1 class="Proyect-work">Web Flutter Intrusion</h1>
+      <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+      <div class="goGitHubProyect">
+        <a href="https://github.com/Lukezet/MoviesApp" target="_blank">See the Code<i class="fab fa-github"></i></a>
+      </div>
+      <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
+    </section>   
+  </div>
+  
+  <div class="card">
+    <video class="video" src="/assets/videos/MoviesAPP.mp4" controls></video>
+    <section class="textSection">
+      <h1 class="Proyect-work">QR sheets</h1>
+      <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+      <div class="goGitHubProyect">
+        <a href="https://github.com/Lukezet/MoviesApp" target="_blank">See the Code<i class="fab fa-github"></i></a>
+      </div>
+      <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

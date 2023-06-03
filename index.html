@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!--ICONS FLATICON-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <!-- FONT AWSEOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FONT RALEWAY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300&display=swap" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-main">
+            <img src="assets/img/LYZicon.png" alt="logoL" class="nav-brand">
+            <ul class="nav-menu">
+                <li>
+                    <a href="#home">HOME</a>
+                </li>
+                <li>
+                    <a href="#works">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="#works">PORTFOLIO</a>
+                </li>
+                <li>
+                    <a href="a">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <!--Profile-->
+        <header class="showprofile" id="home">
+            <div class="principal-text"> 
+                <h1>LUCAS YAÑEZ DEV</h1>
+                <p>Welcome to my profile! I am an Web & Mobile Developer</p>
+                <br>
+                <a href="#works" class="btnKnow btnKnowDesktop">know me <i class="fas fa-angle-double-down"></i></a> 
+            </div>
+            <div class="Pic-Container">
+                <img src="assets/img/Diamondprofile2sh2.png" alt="profileImg" class="header-profile">
+            </div>
+            <a href="#works" class="btnKnow btnKnowMobile">know me <i class="fas fa-angle-double-down"></i></a>        
+        </header>
+    </div>
+    <div class="container2">
+        <section class="grilla" id="works">
+            <div class="mirrorbtn">
+                <section class="circle">
+                    <img src="assets/img/idea.png" alt="ImgIdeas">
+                </section>
+                <span class="label">enterprising</span>
+            </div>
+            <div class="mirrorbtn" onclick="transitionToMobile_proyects()">
+                <section class="circle">
+                    <img src="assets/img/smartphone.png" alt="ImgIdeas">
+                </section>
+                <span class="label">mobile</span>
+            </div>
+            <div class="mirrorbtn">
+                <section class="circle">
+                    <img src="assets/img/coding.png" alt="ImgIdeas">
+                </section>
+                <span class="label">software</span>
+            </div>
+            <div class="mirrorbtn">
+                <section class="circle">
+                    <img src="assets/img/internet.png" alt="ImgIdeas">
+                </section>
+                <span class="label">web</span>
+            </div>
+        </section>
+    </div>
+    <a href="#home" class="back-to-top" title="Back to Top">
+        <img src="assets/img/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    </a>
+    <script src="main.js"></script>
+</body>
+</html>
