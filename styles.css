@@ -97,6 +97,9 @@ ul {
     margin-bottom: 10px;
  
 }
+@media (max-width: 400px) {
+    h1{font-size: 2rem;}
+}
 .showprofile{
     width: 100%;
     height: 80%;
@@ -104,6 +107,7 @@ ul {
     grid-template-columns: 1fr 1fr;
 
 }
+
 .principal-text{
     display: flex;
     flex-direction: column;
@@ -112,7 +116,7 @@ ul {
 
 }
 .btnKnow{
-   padding-top: 30px;
+    padding-top: 30px;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
@@ -193,6 +197,10 @@ ul {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
 }
+@media (max-width: 400px) {
+    .grilla .mirrorbtn{
+        width: 18rem;
+    }}
 .circle{
     display: flex;
     align-items: center;
@@ -226,7 +234,9 @@ ul {
 }
 .grilla .mirrorbtn:hover{
     /* border: 1px solid #2086ca */
-    border: 1px solid #7062d3
+    border: 1px solid #7062d3;
+    transform: scale(1);
+    
 }
 .btnKnowMobile{
     display: none;
@@ -239,8 +249,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     z-index: 10;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -261,8 +271,10 @@ ul {
 }
 
 @media (max-width: 800px) {
+    
     .container1 {
         padding: 10px 10px;
+        overflow: hidden;
     
     }
     .menu-btn {
@@ -325,7 +337,14 @@ ul {
     
     }
     .container2 {
-        margin-top: 30px;
+        height: auto;
+        overflow: hidden;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        background-image: url('assets/img/nnneon.svg');
+        background-repeat: no-repeat;
+        background-size:300%;
+        background-position: 20px -50px;
     }
     .grilla {
         grid-template-columns: 1fr;
@@ -342,7 +361,10 @@ ul {
     }
        
 }
+@media (max-width: 400px) {
+    .showprofile{padding-top: 1rem;}
 
+}
 @media (max-width: 350px) {
     .btnKnowMobile{
         margin-top: 120px;
