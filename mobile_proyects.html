@@ -42,6 +42,16 @@ html, body {
     transform: translateX(0);
       }
     }
+.slide-out{animation: slideOut 2s forwards;}
+  @keyframes slideOut {
+     100% {
+    transform: translateX(-100%);
+  }
+    0% {
+    transform: translateX(0%);
+      }
+  }
+
     .card {
       display: grid;
       grid-template-columns: 1fr 1fr;

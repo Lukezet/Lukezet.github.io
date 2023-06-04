@@ -29,13 +29,13 @@ function transitionToMobile_proyects() {
   document.querySelector('.container2').classList.add('slide-out');
   setTimeout(function() {
     window.location.href = "mobile_proyects.html";
-  }, 300);
+  }, 500);
 }
 function transitionToHome() {
   document.querySelector('.card').classList.add('slide-out');
   setTimeout(function() {
-    window.location.href = "index.html";
-  }, 0);
+    window.location.href = "index.html#container2";
+  }, 800);
 }
 // function transitionToMobile_proyects() {
 //   window.location.href = "mobile_proyects.html";}
