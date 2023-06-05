@@ -42,7 +42,7 @@ html, body {
     transform: translateX(0);
       }
     }
-.slide-out{animation: slideOut 2s forwards;}
+.slide-out{animation: slideOut 1s forwards;}
   @keyframes slideOut {
      100% {
     transform: translateX(-100%);
@@ -82,6 +82,7 @@ html, body {
       align-self: center;
       justify-self: center;
       height: 50rem;
+      max-width: 28rem;
       border-radius: 20px;
       -webkit-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
       -moz-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
@@ -143,6 +144,7 @@ html, body {
     height: 4rem;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
     background: #262626;
     color: #fff;
     font-size: 15px;
@@ -165,12 +167,13 @@ html, body {
 </head>
 <body>
   <div class="card cardOne">
-    <video class="video" src="/assets/videos/MoviesAPP.mp4" controls></video>
+    <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video>
     <section class="textSection">
       <h1 class="Proyect-work">MoviesAPP</h1>
       <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
       <a href="https://github.com/Lukezet/MoviesApp" class="goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
-      <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
+      <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
+      <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
     </section>
   </div>
   

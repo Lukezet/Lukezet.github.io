@@ -9,11 +9,9 @@ const backToTopButton = document.querySelector(".back-to-top");
 let isBackToTopRendered = false;
 
 let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
+  backToTopButton.style.visibility = isBackToTopRendered ?  "visible" : "hidden";
+  backToTopButton.style.opacity = isBackToTopRendered    ?          1 : 0;
+  backToTopButton.style.transform = isBackToTopRendered  ? "scale(1)" : "scale(0)";
 };
 
 window.addEventListener("scroll", () => {
@@ -31,11 +29,14 @@ function transitionToMobile_proyects() {
     window.location.href = "mobile_proyects.html";
   }, 500);
 }
-function transitionToHome() {
-  document.querySelector('.card').classList.add('slide-out');
-  setTimeout(function() {
-    window.location.href = "index.html#container2";
-  }, 800);
-}
+
+
+
+// function transitionToHome() {
+//   document.querySelector('.card').classList.add('slide-out');
+//   setTimeout(function() {
+//     window.location.href = "index.html#container2";
+//   }, 800);
+// }
 // function transitionToMobile_proyects() {
 //   window.location.href = "mobile_proyects.html";}
