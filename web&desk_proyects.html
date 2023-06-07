@@ -22,6 +22,7 @@ html, body {
     font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
 }
     body {
+      overflow-y: hidden;
       background-color: #141414;
       display: flex;
       background-image: url('assets/img/nnneonSquare.svg');
@@ -30,6 +31,31 @@ html, body {
       align-items: center;
       font-family: 'Raleway', sans-serif;
     }
+
+
+    .card {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      border-radius: 10px;
+      height: auto;
+      margin: 30px;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    }
+@media (max-width: 880px) {
+    .card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      border-radius: 30px;
+      padding: 0;
+      padding-bottom: 5rem;
+    }
+}
 .cardOne{animation: slideIn 1s forwards;}
     @keyframes slideIn {
       0% {
@@ -48,48 +74,22 @@ html, body {
     transform: translateX(0%);
       }
   }
-
-    .card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-radius: 10px;
-      height: auto;
-      margin: 30px;
-      padding: 30px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
-    }
-    @media (max-width: 700px) {
-  
-
-  .card {
-      height: auto;
-      text-align: center;
-      margin: 30px 0;
-      grid-template-columns: 1fr;
-      border-radius: 30px;
-    }
-}
     
     .video {
       align-self: center;
       justify-self: center;
       height: 40rem;
-      max-width: 80rem;
+      max-width: 90%;
       border-radius: 20px;
       -webkit-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
       -moz-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
       box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
     }
-    @media (max-width: 700px) {
+    @media (max-width: 880px) {
   .video {
-      height: 80vh;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      max-width: 80%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
       }
   }
   .textSection{
@@ -98,7 +98,7 @@ html, body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0rem;
+    padding: 2rem;
   }
   .Proyect-work{
     font-size: 4rem;
@@ -108,6 +108,7 @@ html, body {
     margin: 2rem 0;
     font-size: 2rem;
     color: aliceblue;
+    text-align: center;
   }
   .backbtn {
     display: flex;
@@ -120,7 +121,7 @@ html, body {
     text-decoration: none;
     background: #262626;
     color: #fff;
-    font-size: 15px;
+    font-size: 1.5rem;
     border: 1px solid #8731e0;
     border-radius: 2px;
     box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
@@ -143,20 +144,38 @@ html, body {
   .fab.fa-github {
     font-size: 2.5rem; /* Ajusta el tamaño según tus necesidades */
   }
-  .card {
-    position: relative;
-  }
-
   .logoContainer {
     position: absolute;
-    bottom: -10%;
-    left: 0;
-    width: 70%;
+    bottom: -5%;
+    left: 3%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
   }
+@media (max-width:880px) {
+  .logoContainer{
+  justify-self: center;
+  width: 100%;
+  left: 0%;  
+}
+}  
+
+  .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #262626;
+  }
+  .logo{
+    width: 60%;
+    height: 60%;
+  }
   </style>
 <body>
+  <div class="Principal-Container">
     <div class="card">
         <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video>
         <section class="textSection">
@@ -167,11 +186,22 @@ html, body {
           <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
         </section>
         <div class="logoContainer">
+          <div class:"space"></div>
+          <div class="circle">
             <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
-            <img class="logo" src="/assets/img/html-5.png" alt="Logo 2">
-            <img class="logo" src="/assets/img/html-5.png" alt="Logo 3">
-            <img class="logo" src="/assets/img/html-5.png" alt="Logo 4">
           </div>
-      </div>
+          <div class="circle">
+            <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+          </div>
+          <div class="circle">
+            <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+          </div>
+          <div class="circle">
+            <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+          </div>
+          <div class:"space"></div>
+        </div>
+    </div>
+  </div>  
 </body>
 </html>
