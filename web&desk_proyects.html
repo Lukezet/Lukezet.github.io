@@ -39,6 +39,7 @@ html, body {
       border-radius: 10px;
       height: auto;
       margin: 30px;
+      margin-bottom: 10rem;
       padding: 30px;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
       backdrop-filter: blur(10px);
@@ -74,8 +75,86 @@ html, body {
     transform: translateX(0%);
       }
   }
+  
+  .slider {
+      aspect-ratio: 10/16;
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      position: relative;
+      overflow: scroll;
+      scroll-snap-type: mandatory;
+      width: 90%;
+      height: 40rem;
+      border-radius: 20px;
+      -webkit-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+    }
+  .slider img{
+    width: 100%;
+    left:0;
+    position: sticky;
+    object-fit: cover;
+    scroll-snap-align: center;
+
+  }
+    @media (max-width: 880px) {
+      .slider{
+      width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+    @media (max-width: 415px) {
+      .slider{
+      width: 80%;
+      height: 20vh;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+  
+  .section-pic{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 40rem;
+    box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
     
-    .video {
+  }
+  @media (max-width: 880px) {
+      .section-pic{
+      width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+  @media (max-width: 415px) {
+      .section-pic{
+      width: 80%;
+      height: 20vh;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+  .section-pic img{
+    width: 0;
+    border-radius: 20px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5 ease;
+  }
+  .section-pic img:hover{
+    cursor:all-scroll;
+    width: 50rem;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+  @media (max-width: 805px) {
+      .section-pic img:hover{
+      width: 90%;
+      }
+    }
+  .video {
       align-self: center;
       justify-self: center;
       height: 40rem;
@@ -88,7 +167,7 @@ html, body {
     @media (max-width: 880px) {
   .video {
       max-width: 80%;
-      margin-top: 2rem;
+      margin-top: 4rem;
       margin-bottom: 2rem;
       }
   }
@@ -186,7 +265,7 @@ html, body {
           <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
         </section>
         <div class="logoContainer">
-          <div class:"space"></div>
+          <div class="space"></div>
           <div class="circle">
             <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
           </div>
@@ -199,8 +278,71 @@ html, body {
           <div class="circle">
             <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
           </div>
-          <div class:"space"></div>
+          <div class="space"></div>
         </div>
+    </div>
+    <div class="card">
+      <div class="slider">
+        <img src="/assets/img/webDesign1.png" alt="imagen de Proyecto">
+        <img src="/assets/img/webDesign2.png" alt="imagen de Proyecto">
+        <img src="/assets/img/webDesign3.png" alt="imagen de Proyecto">
+      </div>
+      <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
+      <section class="textSection">
+        <h1 class="Proyect-work">MoviesAPP</h1>
+        <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+        <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
+        <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
+        <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      </section>
+      <div class="logoContainer">
+        <div class="space"></div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+        </div>
+        <div class="space"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-pic">
+        <img src="/assets/img/webDesign1.png" alt="imagen de Proyecto">
+        <img src="/assets/img/webDesign2.png" alt="imagen de Proyecto">
+        <img src="/assets/img/webDesign3.png" alt="imagen de Proyecto">
+        <img src="/assets/img/webDesign4.png" alt="imagen de Proyecto">
+      </div>
+      <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
+      <section class="textSection">
+        <h1 class="Proyect-work">MoviesAPP</h1>
+        <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+        <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
+        <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
+        <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      </section>
+      <div class="logoContainer">
+        <div class="space"></div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+        </div>
+        <div class="space"></div>
+      </div>
     </div>
   </div>  
 </body>
