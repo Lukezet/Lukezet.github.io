@@ -101,7 +101,7 @@ html, body {
   }
     @media (max-width: 880px) {
       .slider{
-      width: 80%;
+      width: 100%;
       margin-top: 4rem;
       margin-bottom: 2rem;}
       }
@@ -114,12 +114,12 @@ html, body {
       }
   
   .section-pic{
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    width: 90%;
-    height: 40rem;
-    box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      width: 90%;
+      height: 40rem;
+      box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
     
   }
   @media (max-width: 880px) {
@@ -130,10 +130,8 @@ html, body {
       }
   @media (max-width: 415px) {
       .section-pic{
-      width: 80%;
       height: 20vh;
-      margin-top: 4rem;
-      margin-bottom: 2rem;}
+}
       }
   .section-pic img{
     width: 0;
@@ -252,6 +250,63 @@ html, body {
     width: 60%;
     height: 60%;
   }
+  .container-carrousel{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    
+  }
+  @media (max-width: 880px) {
+  .container-carrousel {
+      max-width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+}}
+
+.carrousel{
+    display: flex;
+    width: 400%;
+    height: 400px;
+  }
+@media (max-width: 415px) {
+  .container-carrousel{
+      height: 20vh;
+
+} 
+.carrousel{
+    height: 20vh;
+  }
+
+    }
+
+  .carrousel-section{
+    width: 100%;
+
+  }
+  .carrousel-img{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    margin-left: -100%;
+  }
+  .btn-carrousel{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 43%;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn-carrousel-left{left:5px}
+  .btn-carrousel-right{right: 5px;}
   </style>
 <body>
   <div class="Principal-Container">
@@ -261,7 +316,6 @@ html, body {
           <h1 class="Proyect-work">MoviesAPP</h1>
           <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
           <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
-          <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
           <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
         </section>
         <div class="logoContainer">
@@ -281,12 +335,27 @@ html, body {
           <div class="space"></div>
         </div>
     </div>
+
     <div class="card">
-      <div class="slider">
-        <img src="/assets/img/webDesign1.png" alt="imagen de Proyecto">
-        <img src="/assets/img/webDesign2.png" alt="imagen de Proyecto">
-        <img src="/assets/img/webDesign3.png" alt="imagen de Proyecto">
+      <div class="container-carrousel">
+        <div class="carrousel" id="carrousel">
+          <div class="carrousel-section">
+            <img src="/assets/img/webDesign1.png" alt="" class="carrousel-img">
+          </div>
+          <div class="carrousel-section">
+            <img src="/assets/img/webDesign2.png" alt="" class="carrousel-img">
+          </div>
+          <div class="carrousel-section">
+            <img src="/assets/img/webDesign3.png" alt="" class="carrousel-img">
+          </div>
+          <div class="carrousel-section">
+            <img src="/assets/img/webDesign4.png" alt="" class="carrousel-img">
+          </div>
+        </div>
+        <div class="btn-carrousel btn-carrousel-left" id="btn-left">&#60;</div>
+        <div class="btn-carrousel btn-carrousel-right" id="btn-right">&#62;</div>
       </div>
+
       <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
       <section class="textSection">
         <h1 class="Proyect-work">MoviesAPP</h1>
@@ -311,39 +380,8 @@ html, body {
         </div>
         <div class="space"></div>
       </div>
-    </div>
-    <div class="card">
-      <div class="section-pic">
-        <img src="/assets/img/webDesign1.png" alt="imagen de Proyecto">
-        <img src="/assets/img/webDesign2.png" alt="imagen de Proyecto">
-        <img src="/assets/img/webDesign3.png" alt="imagen de Proyecto">
-        <img src="/assets/img/webDesign4.png" alt="imagen de Proyecto">
-      </div>
-      <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
-      <section class="textSection">
-        <h1 class="Proyect-work">MoviesAPP</h1>
-        <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
-        <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
-        <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
-        <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
-      </section>
-      <div class="logoContainer">
-        <div class="space"></div>
-        <div class="circle">
-          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
-        </div>
-        <div class="circle">
-          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
-        </div>
-        <div class="circle">
-          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
-        </div>
-        <div class="circle">
-          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
-        </div>
-        <div class="space"></div>
-      </div>
-    </div>
-  </div>  
+    </div>  
+  </div>
+  <script src="carrousel.js"></script> 
 </body>
 </html>
