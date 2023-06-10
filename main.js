@@ -29,6 +29,12 @@ function transitionToMobile_proyects() {
     window.location.href = "mobile_proyects.html";
   }, 500);
 }
+function transitionToWebDesktop_proyects() {
+  document.querySelector('.container2').classList.add('slide-out');
+  setTimeout(function() {
+    window.location.href = "web&desk_proyects.html";
+  }, 500);
+}
 
 
 

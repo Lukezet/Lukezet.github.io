@@ -1,35 +1,35 @@
-const carrousel = document.querySelector("#carrousel");
-let carrouselSection = document.querySelectorAll(".carrousel-section");
-let carrouselSectionLast = carrouselSection[carrouselSection.length -1];
+const carrote = document.querySelector("#carrote");
+let carroteSection = document.querySelectorAll(".carrote-section");
+let carroteSectionLast = carroteSection[carroteSection.length -1];
 
-const btnLeft = document.querySelector("#btn-left");
-const btnRight = document.querySelector("#btn-right");
+const btnLeft2 = document.querySelector("#btn-left2");
+const btnRight2 = document.querySelector("#btn-right2");
 
-carrousel.insertAdjacentElement('afterbegin',carrouselSectionLast);//obtengo el ultimo elemento y lo coloco en el carrousel
+carrote.insertAdjacentElement('afterbegin',carroteSectionLast);//obtengo el ultimo elemento y lo coloco en el carrote
 
-function Next(){
-    let carrouselSectionFirst = document.querySelectorAll(".carrousel-section")[0];
-    carrousel.style.marginLeft = "-100%";
-    carrousel.style.transition = "all 0.7s";
+function Sig(){
+    let carroteSectionFirst = document.querySelectorAll(".carrote-section")[0];
+    carrote.style.marginLeft = "-100%";
+    carrote.style.transition = "all 0.7s";
     setTimeout(function(){
-        carrousel.style.transition = "none";
-        carrousel.insertAdjacentElement('beforeend',carrouselSectionFirst);
-        carrousel.style.marginLeft = "0";
+        carrote.style.transition = "none";
+        carrote.insertAdjacentElement('beforeend',carroteSectionFirst);
+        carrote.style.marginLeft = "0";
     },700);
 }
-function Prev(){
-    let carrouselSection = document.querySelectorAll(".carrousel-section");
-    let carrouselSectionLast = carrouselSection[carrouselSection.length -1];
-    carrousel.style.marginLeft = "100%";
-    carrousel.style.transition = "all 0.7s";
+function Back(){
+    let carroteSection = document.querySelectorAll(".carrote-section");
+    let carroteSectionLast = carroteSection[carroteSection.length -1];
+    carrote.style.marginLeft = "100%";
+    carrote.style.transition = "all 0.7s";
     setTimeout(function(){
-        carrousel.style.transition = "none";
-        carrousel.insertAdjacentElement("afterbegin",carrouselSectionLast);
-        carrousel.style.marginLeft = "0";
+        carrote.style.transition = "none";
+        carrote.insertAdjacentElement("afterbegin",carroteSectionLast);
+        carrote.style.marginLeft = "0";
     },700)
 }
-btnRight.addEventListener('click', function(){Next();})
-btnLeft.addEventListener('click', function(){Prev();})
+btnRight2.addEventListener('click', function(){Sig();})
+btnLeft2.addEventListener('click', function(){Back();})
 setInterval(function(){
-    Next();
+    Sig();
 },4000)

@@ -249,6 +249,8 @@ html, body {
   .logo{
     width: 60%;
     height: 60%;
+
+    
   }
   .container-carrousel{
     width: 90%;
@@ -268,7 +270,7 @@ html, body {
 
 .carrousel{
     display: flex;
-    width: 400%;
+    width: 300%;
     height: 400px;
   }
 @media (max-width: 415px) {
@@ -307,50 +309,82 @@ html, body {
   }
   .btn-carrousel-left{left:5px}
   .btn-carrousel-right{right: 5px;}
+
+  .container-carrote{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    
+  }
+  @media (max-width: 880px) {
+  .container-carrote {
+      max-width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+}}
+
+.carrote{
+    display: flex;
+    width: 300%;
+    height: 400px;
+  }
+@media (max-width: 415px) {
+  .container-carrote{
+      height: 20vh;
+
+} 
+.carrote{
+    height: 20vh;
+  }
+
+    }
+
+  .carrote-section{
+    width: 100%;
+
+  }
+  .carrote-img{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    margin-left: -100%;
+  }
+  .btn-carrote{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 43%;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn-carrote-left{left:5px}
+  .btn-carrote-right{right: 5px;}
   </style>
 <body>
   <div class="Principal-Container">
-    <div class="card">
-        <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video>
-        <section class="textSection">
-          <h1 class="Proyect-work">MoviesAPP</h1>
-          <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
-          <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
-          <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
-        </section>
-        <div class="logoContainer">
-          <div class="space"></div>
-          <div class="circle">
-            <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
-          </div>
-          <div class="circle">
-            <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
-          </div>
-          <div class="circle">
-            <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
-          </div>
-          <div class="circle">
-            <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
-          </div>
-          <div class="space"></div>
-        </div>
-    </div>
-
-    <div class="card">
+    <div class="card cardOne">
       <div class="container-carrousel">
         <div class="carrousel" id="carrousel">
           <div class="carrousel-section">
-            <img src="/assets/img/webDesign1.png" alt="" class="carrousel-img">
+            <img src="/assets/img/vionzaWeb.png" alt="" class="carrousel-img">
           </div>
           <div class="carrousel-section">
-            <img src="/assets/img/webDesign2.png" alt="" class="carrousel-img">
+            <img src="/assets/img/vionzaWeb1.png" alt="" class="carrousel-img">
           </div>
           <div class="carrousel-section">
-            <img src="/assets/img/webDesign3.png" alt="" class="carrousel-img">
+            <img src="/assets/img/vionzaWeb2.png" alt="" class="carrousel-img">
           </div>
-          <div class="carrousel-section">
+          <!-- <div class="carrousel-section">
             <img src="/assets/img/webDesign4.png" alt="" class="carrousel-img">
-          </div>
+          </div> -->
         </div>
         <div class="btn-carrousel btn-carrousel-left" id="btn-left">&#60;</div>
         <div class="btn-carrousel btn-carrousel-right" id="btn-right">&#62;</div>
@@ -358,8 +392,9 @@ html, body {
 
       <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
       <section class="textSection">
-        <h1 class="Proyect-work">MoviesAPP</h1>
-        <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
+        <h1 class="Proyect-work">VIONZA shoes</h1>
+        <p class="description">
+          This project was for one of my former businesses. I developed this Ecommerce using basic technologies such as HTML, CSS, and JavaScript, and for the backend, I utilized ASP.NET and SQL Server as the database. I also integrated several payment gateways such as Mercado Pago and Stripe. It was successfully developed and launched during my time with the business, allowing customers to make online purchases.</p>
         <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
         <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
         <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
@@ -367,21 +402,68 @@ html, body {
       <div class="logoContainer">
         <div class="space"></div>
         <div class="circle">
-          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+          <img class="logo" src="/assets/img/logo2.png" alt="Logo 1">
         </div>
         <div class="circle">
-          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+          <img class="logo" src="/assets/img/logo4.png" alt="Logo 1">
         </div>
         <div class="circle">
-          <img class="logo" src="/assets/img/html-5.png" alt="Logo 1">
+          <img class="logo" src="/assets/img/logo5.png" alt="Logo 1">
         </div>
         <div class="circle">
-          <img class="logo" src="/assets/img/css-3.png" alt="Logo 1">
+          <img class="logo" src="/assets/img/logo6.png" alt="Logo 1">
         </div>
         <div class="space"></div>
       </div>
-    </div>  
+    </div>
+    
+    <div class="card">
+      <div class="container-carrote">
+        <div class="carrote" id="carrote">
+          <div class="carrote-section">
+            <img src="/assets/img/OB3.png" alt="" class="carrote-img">
+          </div>
+          <div class="carrote-section">
+            <img src="/assets/img/OB2.png" alt="" class="carrote-img">
+          </div>
+          <div class="carrote-section">
+            <img src="/assets/img/OB3.png" alt="" class="carrote-img">
+          </div>
+          <!-- <div class="carrote-section">
+            <img src="/assets/img/webDesign4.png" alt="" class="carrote-img">
+          </div> -->
+        </div>
+        <div class="btn-carrote btn-carrote-left" id="btn-left2">&#60;</div>
+        <div class="btn-carrote btn-carrote-right" id="btn-right2">&#62;</div>
+      </div>
+
+      <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
+      <section class="textSection">
+        <h1 class="Proyect-work">UPCN systems</h1>
+        <p class="description">In the context of my work experience, I am engaged in UPCN's web and desktop systems, where I carry out development tasks related to accounting, database management, and have developed the procedure for sending information and receiving payments from the bank through direct debit. This is in addition to other development and maintenance tasks.</p>
+        <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
+        <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
+        <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      </section>
+      <div class="logoContainer">
+        <div class="space"></div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo4.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo2.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo3.png" alt="Logo 1">
+        </div>
+        <div class="space"></div>
+      </div>
+    </div> 
   </div>
-  <script src="carrousel.js"></script> 
+  <script src="carrote.js"></script>
+  <script src="carrousel.js"></script>  
 </body>
 </html>
