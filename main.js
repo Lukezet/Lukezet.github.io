@@ -26,23 +26,21 @@ window.addEventListener("scroll", () => {
 function transitionToMobile_proyects() {
   document.querySelector('.container2').classList.add('slide-out');
   setTimeout(function() {
-    window.location.href = "mobile_proyects.html";
+    window.location.href = "/Pages/mobile_proyects.html";
   }, 500);
 }
 function transitionToWebDesktop_proyects() {
   document.querySelector('.container2').classList.add('slide-out');
   setTimeout(function() {
-    window.location.href = "web&desk_proyects.html";
+    window.location.href = "/Pages/web&desk_proyects.html";
   }, 500);
 }
 
 
 
-// function transitionToHome() {
-//   document.querySelector('.card').classList.add('slide-out');
-//   setTimeout(function() {
-//     window.location.href = "index.html#container2";
-//   }, 800);
-// }
-// function transitionToMobile_proyects() {
-//   window.location.href = "mobile_proyects.html";}
+function transitionToHome() {
+  document.querySelector('.card').classList.add('slide-out');
+  setTimeout(function() {
+    window.location.href = "/index.html";
+  }, 500);
+}

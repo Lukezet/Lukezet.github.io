@@ -27,7 +27,7 @@ html, body {
     body {
       background-color: #141414;
       display: flex;
-      background-image: url('assets/img/nnneonSquare.svg');
+      background-image: url('/assets/img/nnneonSquare.svg');
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -76,10 +76,10 @@ html, body {
 .slide-out{animation: slideOut 1s forwards;}
   @keyframes slideOut {
      100% {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
     0% {
-    transform: translateX(0%);
+    transform: translateY(0%);
       }
   }
 
@@ -178,8 +178,8 @@ html, body {
       <h1 class="Proyect-work">MoviesAPP</h1>
       <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
       <a href="https://github.com/Lukezet/MoviesApp" class="goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
-      <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
-      <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      <div class="backbtn" onclick="transitionToHome()">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></div>
+      <!-- <a href="/index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a> -->
     </section>
   </div>
   
@@ -218,6 +218,6 @@ html, body {
       <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
     </section>
   </div>
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/LYZicon.png" />
     <title>Portfolio</title>
     <!--ICONS FLATICON-->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container1">
         <div class="menu-btn">
             <i class="fas fa-bars"></i>
@@ -25,17 +27,17 @@
         <nav class="nav-main">
             <img src="assets/img/LYZicon.png" alt="logoL" class="nav-brand">
             <ul class="nav-menu">
-                <li>
-                    <a href="#home">HOME</a>
+                <li class="nav-item">
+                    <a href="#home" class="item">HOME</a>
                 </li>
-                <li>
-                    <a href="#works">ABOUT ME</a>
+                <li class="nav-item">
+                    <a href="#works" class="item">ABOUT ME</a>
                 </li>
-                <li>
-                    <a href="#works">PORTFOLIO</a>
+                <li class="nav-item">
+                    <a href="#works" class="item">PORTFOLIO</a>
                 </li>
-                <li>
-                    <a href="a">CONTACT</a>
+                <li class="nav-item">
+                    <a href="a" class="item">CONTACT</a>
                 </li>
             </ul>
         </nav>
@@ -63,6 +65,7 @@
                 <img src="assets/img/logo5.png" alt="">
                 <img src="assets/img/logo6.png" alt="">
                 <img src="assets/img/logo7.png" alt="">
+                <img src="assets/img/github.svg" alt="">
             </div>
 
             <div class="slide">
@@ -73,6 +76,7 @@
                 <img src="assets/img/logo5.png" alt="">
                 <img src="assets/img/logo6.png" alt="">
                 <img src="assets/img/logo7.png" alt="">
+                <img src="assets/img/github.svg" alt="">
             </div>
         </div>
     </div>
@@ -103,7 +107,45 @@
                 <span class="label">web</span>
             </div>
         </section>
+    
     </div>
+    <footer role="contentinfo" class="footer">
+        <div class="row">
+          <!-- Update the links to point to your accounts -->
+          <ul class="footer__social-links">
+            <li class="footer__social-link-item">
+              <a href="https://twitter.com/LucasYa77039950" title="Link to Twitter Profile">
+                <img src="./assets/img/twitter.svg" class="footer__social-image" alt="Twitter">
+              </a>
+            </li>
+            <li class="footer__social-link-item">
+              <a href="https://github.com/Lukezet" title="Link to Github Profile">
+                <img src="./assets/img/github.svg" class="footer__social-image" alt="Github">
+              </a>
+            </li>
+            <li class="footer__social-link-item">
+              <a href="https://www.instagram.com/lucas_yanezbogni/?hl=es" title="Link to Instagram Profile">
+                <img src="./assets/img/insta.png" class="footer__social-image" alt="Instagram">
+              </a>
+            </li>
+            <li class="footer__social-link-item">
+              <a href="https://www.linkedin.com/in/lucas-ya%C3%B1ez-3bbb7722b/">
+                <img src="./assets/img/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+              </a>
+            </li>
+          </ul>
+
+          <p>
+            &copy; 2023 - Web portfolio designed & developed by <a href="https://www.linkedin.com/in/lucas-ya%C3%B1ez-3bbb7722b/" class="link">Lucas Dev</a>.
+          </p>
+          <div class="footer__github-buttons">
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=Lukezet&repo=Lukezet.github.io&type=watch&count=true"
+              frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+            </iframe>
+          </div>
+        </div>
+      </footer>
     <a href="#home" class="back-to-top" title="Back to Top">
         <img src="assets/img/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
     </a>
