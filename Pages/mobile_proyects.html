@@ -27,30 +27,28 @@ html, body {
     body {
       background-color: #141414;
       display: flex;
-      background-image: url('assets/img/nnneonSquare.svg');
+      background-image: url('/assets/img/nnneonSquare.svg');
       flex-direction: column;
       justify-content: center;
       align-items: center;
       font-family: 'Raleway', sans-serif;
     }
-.cardOne{animation: slideIn 1s forwards;}
-    @keyframes slideIn {
-      0% {
-    transform: translateX(-100%);
+  /* Cambiar el color del scrollbar en Google Chrome */
+  ::-webkit-scrollbar {
+    width: 10px;
   }
-    100% {
-    transform: translateX(0);
-      }
+::-webkit-scrollbar-track {
+    background-color: #000; /* Color negro para el fondo del scrollbar */
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a;
+    border-radius: 1rem; /* Color más oscuro para el thumb (barra móvil) */
+}
+
+    .Principal-Container{
+      height: 100%;
+      margin-bottom: 100px;
     }
-.slide-out{animation: slideOut 1s forwards;}
-  @keyframes slideOut {
-     100% {
-    transform: translateX(-100%);
-  }
-    0% {
-    transform: translateX(0%);
-      }
-  }
 
     .card {
       display: grid;
@@ -65,7 +63,7 @@ html, body {
       border-radius: 20px;
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
-    }
+    }    
     @media (max-width: 700px) {
   
 
@@ -77,6 +75,25 @@ html, body {
       border-radius: 30px;
     }
 }
+.cardOne{animation: slideIn 1s forwards;}
+    @keyframes slideIn {
+      0% {
+    transform: translateX(-100%);
+  }
+    100% {
+    transform: translateX(0);
+      }
+    }
+.slide-out{animation: slideOut 1s forwards;}
+  @keyframes slideOut {
+     100% {
+    transform: translateY(-100%);
+  }
+    0% {
+    transform: translateY(0%);
+      }
+  }
+
     
     .video {
       align-self: center;
@@ -167,13 +184,13 @@ html, body {
 </head>
 <body>
   <div class="card cardOne">
-    <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video>
+    <video class="video" src="/assets/videos/MoviesAPP.mp4" controls></video>
     <section class="textSection">
       <h1 class="Proyect-work">MoviesAPP</h1>
       <p class="description">This is an app developed in Flutter. I used The Movie DB (TMBD) API. The app doesn't have its own database, which makes it lightweight, and by utilizing TMBD's database, we have access to thousands of movies with constantly updated information. As you can see, it features several functionalities such as a search function, dark mode, and Hero transitions, which give it a more professional touch.</p>
       <a href="https://github.com/Lukezet/MoviesApp" class="goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
-      <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
-      <a href="index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      <div class="backbtn" onclick="transitionToHome()">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></div>
+      <!-- <a href="/index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a> -->
     </section>
   </div>
   
@@ -212,6 +229,6 @@ html, body {
       <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div>
     </section>
   </div>
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>

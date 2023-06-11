@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Works made for web and Desktop</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html, body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    html {
+    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+}
+  /* Cambiar el color del scrollbar en Google Chrome */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background-color: #000; /* Color negro para el fondo del scrollbar */
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a;
+    border-radius: 1rem; /* Color más oscuro para el thumb (barra móvil) */
+}
+    body {
+      overflow-y: hidden;
+      background-color: #141414;
+      display: flex;
+      background-image: url('/assets/img/nnneon.svg');
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Raleway', sans-serif;
+    }
+
+
+    .card {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      border-radius: 10px;
+      height: auto;
+      margin: 30px;
+      margin-bottom: 10rem;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    }
+@media (max-width: 880px) {
+    .card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      border-radius: 30px;
+      padding: 0;
+      padding-bottom: 5rem;
+    }
+}
+.cardOne{animation: slideIn 1s forwards;}
+    @keyframes slideIn {
+      0% {
+    transform: translateX(-100%);
+  }
+    100% {
+    transform: translateX(0);
+      }
+    }
+.slide-out{animation: slideOut 1s forwards;}
+  @keyframes slideOut {
+     100% {
+    transform: translateX(-100%);
+  }
+    0% {
+    transform: translateX(0%);
+      }
+  }
+  
+  .slider {
+      aspect-ratio: 10/16;
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      position: relative;
+      overflow: scroll;
+      scroll-snap-type: mandatory;
+      width: 90%;
+      height: 40rem;
+      border-radius: 20px;
+      -webkit-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+    }
+  .slider img{
+    width: 100%;
+    left:0;
+    position: sticky;
+    object-fit: cover;
+    scroll-snap-align: center;
+
+  }
+    @media (max-width: 880px) {
+      .slider{
+      width: 100%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+    @media (max-width: 415px) {
+      .slider{
+      width: 80%;
+      height: 20vh;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+  
+  .section-pic{
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      width: 90%;
+      height: 40rem;
+      box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+    
+  }
+  @media (max-width: 880px) {
+      .section-pic{
+      width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;}
+      }
+  @media (max-width: 415px) {
+      .section-pic{
+      height: 20vh;
+}
+      }
+  .section-pic img{
+    width: 0;
+    border-radius: 20px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5 ease;
+  }
+  .section-pic img:hover{
+    cursor:all-scroll;
+    width: 50rem;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+  @media (max-width: 805px) {
+      .section-pic img:hover{
+      width: 90%;
+      }
+    }
+  .video {
+      align-self: center;
+      justify-self: center;
+      height: 40rem;
+      max-width: 90%;
+      border-radius: 20px;
+      -webkit-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+      box-shadow: 9px 10px 13px -1px rgba(0,0,0,0.75);
+    }
+    @media (max-width: 880px) {
+  .video {
+      max-width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      }
+  }
+  .textSection{
+    justify-self: center;
+    width: 35rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .Proyect-work{
+    font-size: 4rem;
+    color: aliceblue;
+  }
+  .description {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: aliceblue;
+    text-align: center;
+  }
+  .backbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 4rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    background: #262626;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 1px solid #8731e0;
+    border-radius: 2px;
+    box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 5px 12px 3px rgba(0,0,0,0.47);
+  }
+  .backbtn:hover{
+    color: #8731e0;
+    background:#fff;
+}
+.goGitHubProyect{
+    margin-bottom: 2rem;
+    border: 1px solid #29febf;
+  }
+  .goGitHubProyect:hover{
+    color: #29febf;
+    background:#fff;
+
+}
+  .fab.fa-github {
+    font-size: 2.5rem; /* Ajusta el tamaño según tus necesidades */
+  }
+  .logoContainer {
+    position: absolute;
+    bottom: -5%;
+    left: 3%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+@media (max-width:880px) {
+  .logoContainer{
+  justify-self: center;
+  width: 100%;
+  left: 0%;  
+}
+}  
+
+  .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #262626;
+  }
+  .logo{
+    width: 60%;
+    height: 60%;
+
+    
+  }
+  .container-carrousel{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    
+  }
+  @media (max-width: 880px) {
+  .container-carrousel {
+      max-width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+}}
+
+.carrousel{
+    display: flex;
+    width: 300%;
+    height: 400px;
+  }
+@media (max-width: 415px) {
+  .container-carrousel{
+      height: 20vh;
+
+} 
+.carrousel{
+    height: 20vh;
+  }
+
+    }
+
+  .carrousel-section{
+    width: 100%;
+
+  }
+  .carrousel-img{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    margin-left: -100%;
+  }
+  .btn-carrousel{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 43%;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn-carrousel-left{left:5px}
+  .btn-carrousel-right{right: 5px;}
+
+  .container-carrote{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    
+  }
+  @media (max-width: 880px) {
+  .container-carrote {
+      max-width: 80%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+}}
+
+.carrote{
+    display: flex;
+    width: 300%;
+    height: 400px;
+  }
+@media (max-width: 415px) {
+  .container-carrote{
+      height: 20vh;
+
+} 
+.carrote{
+    height: 20vh;
+  }
+
+    }
+
+  .carrote-section{
+    width: 100%;
+
+  }
+  .carrote-img{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    margin-left: -100%;
+  }
+  .btn-carrote{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 43%;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn-carrote-left{left:5px}
+  .btn-carrote-right{right: 5px;}
+  </style>
+<body>
+  <div class="Principal-Container">
+    <div class="card cardOne">
+      <div class="container-carrousel">
+        <div class="carrousel" id="carrousel">
+          <div class="carrousel-section">
+            <img src="/assets/img/vionzaWeb.png" alt="" class="carrousel-img">
+          </div>
+          <div class="carrousel-section">
+            <img src="/assets/img/vionzaWeb1.png" alt="" class="carrousel-img">
+          </div>
+          <div class="carrousel-section">
+            <img src="/assets/img/vionzaWeb2.png" alt="" class="carrousel-img">
+          </div>
+          <!-- <div class="carrousel-section">
+            <img src="/assets/img/webDesign4.png" alt="" class="carrousel-img">
+          </div> -->
+        </div>
+        <div class="btn-carrousel btn-carrousel-left" id="btn-left">&#60;</div>
+        <div class="btn-carrousel btn-carrousel-right" id="btn-right">&#62;</div>
+      </div>
+
+      <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
+      <section class="textSection">
+        <h1 class="Proyect-work">VIONZA shoes</h1>
+        <p class="description">
+          This project was for one of my former businesses. I developed this Ecommerce using basic technologies such as HTML, CSS, and JavaScript, and for the backend, I utilized ASP.NET and SQL Server as the database. I also integrated several payment gateways such as Mercado Pago and Stripe. It was successfully developed and launched during my time with the business, allowing customers to make online purchases.</p>
+        <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
+        <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
+        <a href="/index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      </section>
+      <div class="logoContainer">
+        <div class="space"></div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo2.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo4.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo6.png" alt="Logo 1">
+        </div>
+        <div class="space"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="container-carrote">
+        <div class="carrote" id="carrote">
+          <div class="carrote-section">
+            <img src="/assets/img/OB3.png" alt="" class="carrote-img">
+          </div>
+          <div class="carrote-section">
+            <img src="/assets/img/OB2.png" alt="" class="carrote-img">
+          </div>
+          <div class="carrote-section">
+            <img src="/assets/img/OB3.png" alt="" class="carrote-img">
+          </div>
+          <!-- <div class="carrote-section">
+            <img src="/assets/img/webDesign4.png" alt="" class="carrote-img">
+          </div> -->
+        </div>
+        <div class="btn-carrote btn-carrote-left" id="btn-left2">&#60;</div>
+        <div class="btn-carrote btn-carrote-right" id="btn-right2">&#62;</div>
+      </div>
+
+      <!-- <video class="video" src="/assets/videos/MoviesA2PP.mp4" controls></video> -->
+      <section class="textSection">
+        <h1 class="Proyect-work">UPCN systems</h1>
+        <p class="description">In the context of my work experience, I am engaged in UPCN's web and desktop systems, where I carry out development tasks related to accounting, database management, and have developed the procedure for sending information and receiving payments from the bank through direct debit. This is in addition to other development and maintenance tasks.</p>
+        <a href="https://github.com/Lukezet/MoviesApp" class="backbtn goGitHubProyect" target="_blank">See the Code&nbsp;&nbsp;<i class="fab fa-github"></i></a>
+        <!-- <div class="backbtn" onclick="transitionToHome()">Back to Home  <i class="fas fa-angle-double-left"></i></div> -->
+        <a href="/index.html" class="backbtn">Back to Home&nbsp;&nbsp;<i class="fas fa-angle-double-left"></i></a>
+      </section>
+      <div class="logoContainer">
+        <div class="space"></div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo5.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo4.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo2.png" alt="Logo 1">
+        </div>
+        <div class="circle">
+          <img class="logo" src="/assets/img/logo3.png" alt="Logo 1">
+        </div>
+        <div class="space"></div>
+      </div>
+    </div> 
+  </div>
+  <script src="/javascripts/carrote.js"></script>
+  <script src="/javascripts/carrousel.js"></script>  
+</body>
+</html>
