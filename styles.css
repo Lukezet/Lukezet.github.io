@@ -92,6 +92,7 @@ ul {
     text-decoration: none;
     color: inherit;
     transition: all .2s;
+
 }
 .item::after {
     content: '';
@@ -103,23 +104,18 @@ ul {
     height: 1rem;
     background: white;
     transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
-}
 
+}
 .item:hover {
     color: rgb(0, 250, 196);
-    /* border-bottom: 2px solid #ffffff ; */
-}
 
+}
 .item:hover::after {
     right: 0;
     height: 2px;
     background: rgb(0, 250, 196);
+
 }
-
-/* .nav-main ul li a:hover{
-    border-bottom: 2px solid #ffffff ;
-
-} */
 .nav-main ul.nav-menu{
     flex: 1;
 
@@ -229,8 +225,6 @@ ul {
     .buttons a:nth-child(2){
         width: 90%;
 
-
-    
     }
 }
 .modal-close-animation {
@@ -249,8 +243,8 @@ ul {
   @keyframes slideOut {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50px); }
-  }
-      
+  
+}    
 /*SHOW PROFILE*/
  h1{
     font-size: 40px;
@@ -261,6 +255,7 @@ ul {
 }
 @media (max-width: 400px) {
     h1{font-size: 2rem;}
+
 }
 .showprofile{
     width: 100%;
@@ -269,7 +264,6 @@ ul {
     grid-template-columns: 1fr 1fr;
 
 }
-
 .principal-text{
     display: flex;
     flex-direction: column;
@@ -303,6 +297,7 @@ ul {
     justify-self: center;
     align-self: center;
     justify-content: center;
+
 }
 .header-profile{
     width: 80%;  
@@ -334,20 +329,19 @@ ul {
   .slide-out {
     animation: slideOut 1s forwards;
   }
-
 .grilla{
     
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
     margin-inline: 30%;
-
 }
 .grilla .mirrorbtn{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     height: 13rem;
     width: 25rem;
     padding: 20px;
@@ -440,7 +434,6 @@ ul {
     align-items: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
-
     background: linear-gradient(94deg, rgba(20,20,20,1) 0%, rgba(24,24,24,0.8) 31%, rgba(50,50,50,0.8) 85%, rgba(66,66,66,1) 100%);
     box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
     /* background: rgb(24,24,24);
