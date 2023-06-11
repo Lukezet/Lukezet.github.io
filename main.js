@@ -35,6 +35,12 @@ function transitionToWebDesktop_proyects() {
     window.location.href = "/Pages/web&desk_proyects.html";
   }, 500);
 }
+function transitionToDesign_proyects() {
+  document.querySelector('.container2').classList.add('slide-out');
+  setTimeout(function() {
+    window.location.href = "/Pages/design_proyects.html";
+  }, 500);
+}
 
 
 
