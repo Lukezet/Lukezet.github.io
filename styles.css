@@ -27,9 +27,9 @@
 }
   
   
-  a[href^="#"] {
+  /* a[href^="#"] {
     transition-duration: var(--scroll-duration);
-  }
+  } */
 
 body{
     width: 100%;
@@ -133,7 +133,7 @@ ul {
 .modal {
     display: none; /* Ocultar el modal por defecto */
     position: fixed; /* Posición fija */
-    z-index: 1; /* Prioridad de visualización */
+    z-index: 2; /* Prioridad de visualización */
     left: 0;
     top: 0;
     width: 100%;
@@ -256,6 +256,46 @@ ul {
     h1{font-size: 2rem;}
 
 }
+/* ------ Home Animations ------- */
+
+.principal-text h1{animation: slideIn 1s forwards;}
+
+.principal-text p{animation: slideIn 1.5s forwards;}
+
+.principal-text .btnKnow{animation: slideIn 1.5s forwards;}
+    @keyframes slideIn {
+      0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(20%);
+  }
+    100% {
+    transform: translateX(0);
+  }
+}
+.header-profile{animation: slidepic 0.4s forwards;}
+@keyframes slidepic {
+  0% {
+transform: translateY(-20%);
+}
+100% {
+transform: translateY(0);
+}
+}
+.nav-menu :nth-child(1){animation: slideNav 0.4s forwards;}
+    @keyframes slideNav {
+      0% {
+    transform: translateY(-120%);
+  }
+    100% {
+    transform: translateY(0);
+  }
+}
+.nav-brand{animation: slideNav 0.3s forwards;}
+.nav-menu :nth-child(2){animation: slideNav 0.7s forwards;}
+.nav-menu :nth-child(3){animation: slideNav 1s forwards;}
+.nav-menu :nth-child(4){animation: slideNav 1.3s forwards;}
 .showprofile{
     width: 100%;
     height: 80%;
@@ -348,14 +388,22 @@ ul {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 20px;
-    /* border:1px solid rgba(255, 255, 255, 0.18); */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all .6s;
 
+}
+.grilla .mirrorbtn:hover{
+    /* border: 1px solid #2086ca */
+    border: 1px solid #7062d3;
+    transform: scale(1.01);
+    
+    
 }
 @media (max-width: 400px) {
     .grilla .mirrorbtn{
         width: 18rem;
-    }}
+    }
+}
 .circle{
     display: flex;
     align-items: center;
@@ -386,12 +434,6 @@ ul {
     height: 50px;
     width: 50px;
 
-}
-.grilla .mirrorbtn:hover{
-    /* border: 1px solid #2086ca */
-    border: 1px solid #7062d3;
-    
-    
 }
 .btnKnowMobile{
     display: none;
@@ -518,6 +560,7 @@ display: flex;
         display: flex;
         flex-direction: column;
         position: absolute;
+        z-index: 1;
         justify-content: center;
         align-items: center;
         padding: 20px;
@@ -536,6 +579,7 @@ display: flex;
         
 
     }
+
     .nav-main .nav-menu.show{
         transition: transform .5s ease-in-out;
         transform: translateY(0px);
