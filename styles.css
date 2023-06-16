@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   html, body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
   }
   html {
@@ -33,7 +33,6 @@
 
 body{
     width: 100%;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,7 +243,7 @@ ul {
     100% { transform: translateY(-50px); }
   
 }    
-/*SHOW PROFILE*/
+
  h1{
     font-size: 40px;
     font-weight: 300;
@@ -296,18 +295,34 @@ transform: translateY(0);
 .nav-menu :nth-child(2){animation: slideNav 0.7s forwards;}
 .nav-menu :nth-child(3){animation: slideNav 1s forwards;}
 .nav-menu :nth-child(4){animation: slideNav 1.3s forwards;}
+
 .showprofile{
     width: 100%;
     height: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center; 
 
 }
 .principal-text{
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center; 
     align-items:start;
+
+}
+.Pic-Container{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-self: center;
+    align-self: flex-end;
+    justify-content: center;
+
+}
+.header-profile{
+    padding-top: 10%;
+    object-fit: cover;  
 
 }
 .btnKnow{
@@ -331,17 +346,7 @@ transform: translateY(0);
     background:#fff;
 
 }
-.Pic-Container{
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    justify-content: center;
 
-}
-.header-profile{
-    width: 80%;  
-
-}
 @media (max-width: 800px) {
 .header-profile {
     width: 100%;
@@ -481,11 +486,11 @@ transform: translateY(0);
     background: linear-gradient(94deg, rgba(24,24,24,0.8) 0%, rgba(36,36,36,0.8) 24%, rgba(25,65,62,0.8) 84%, rgba(32,92,80,0.8) 100%); */
 }
 .slider {
-width: 800px;
+width: 100%;
 height: 100px;
 position: relative;
 display: flex;
-/* overflow: hidden; */
+overflow: hidden;
 
 }
 .slide{
@@ -546,6 +551,9 @@ display: flex;
     .container1 {
         padding: 10px 10px;
         overflow: hidden;
+        height: 80%;
+        width: 100%;
+        margin-bottom: 6rem;
     
     }
     .menu-btn {
@@ -590,16 +598,17 @@ display: flex;
     a {
         font-size: 24px;
     }
-    .container1 {
-        height: auto;
-        margin-bottom: 6rem;
-      }
+
     .showprofile{
         padding-top: 4rem;
-        grid-template-columns: 1fr;
+        flex-direction: column;
         height: auto;
+        justify-content: center;
         text-align: center;
         align-content: center;       
+    }
+    .Pic-Container{
+        width: 100%;
     }
     .header-profile{
         display: flex;
@@ -628,11 +637,12 @@ display: flex;
         display: none;
     }
     .btnKnowMobile{
-        display: block;
-        width: 70%;
-        margin-top: 30px;
-        text-align: center;
-        justify-self: center;
+        display: flex;
+        justify-content: center;
+
+
+        align-self: center;
+        width: 80%;
     }
        
 }
