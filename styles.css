@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   html, body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
   html {
@@ -304,8 +304,9 @@ transform: translateY(0);
 
 }
 .principal-text{
+    margin-left: 3%;
     display: flex;
-    width: 100%;
+    width: 97%;
     flex-direction: column;
     justify-content: center; 
     align-items:start;
@@ -639,8 +640,6 @@ overflow: hidden;
     .btnKnowMobile{
         display: flex;
         justify-content: center;
-
-
         align-self: center;
         width: 80%;
     }
