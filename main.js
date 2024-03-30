@@ -87,9 +87,3 @@ window.onclick = function(event) {
     }, 300); // Igualar la duración de la animación en milisegundos
   }
 }
-    // Detectar cuándo se vuelve a cargar la página (cuando se retrocede)
-    window.addEventListener("pageshow", function(event) {
-      if (event.persisted) {
-        location.reload(); // Recargar la página si el evento es persistente (se retrocedió)
-      }
-    });

@@ -364,18 +364,22 @@ transform: translateY(0);
     justify-content:center;
   
 }
-@keyframes slideOut {
+@keyframes myAnimation {
     0% {
       transform: translateX(0);
     }
-    100% {
+    50% {
       transform: translateX(100%);
     }
+    100% {
+        transform: translateX(0);
+      }
   }
   
   .slide-out {
-    animation: slideOut 1s forwards;
+    animation: myAnimation 2s forwards;
   }
+
 .grilla{
     
     display:grid;
