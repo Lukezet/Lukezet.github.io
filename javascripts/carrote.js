@@ -30,6 +30,3 @@ function Back(){
 }
 btnRight2.addEventListener('click', function(){Sig();})
 btnLeft2.addEventListener('click', function(){Back();})
-setInterval(function(){
-    Sig();
-},4000)

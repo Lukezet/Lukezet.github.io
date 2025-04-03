@@ -303,6 +303,9 @@ transform: translateY(0);
     justify-content: center; 
 
 }
+.video-yt{
+background-color: yellowgreen;
+}
 .principal-text{
     margin-left: 3%;
     display: flex;
